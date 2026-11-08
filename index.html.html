@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Para Annye</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap">
+<style>
+:root{--tinta:#23386b;--linea:#c9d8ee;--margen:#e58b8b;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0;background:#f7f8fb}
+body{min-height:100vh;display:flex;justify-content:center;font-family:'Caveat','Segoe Print','Bradley Hand',cursive;color:var(--tinta)}
+.hoja{width:100%;max-width:34rem;min-height:100vh;padding:2.6rem 1.4rem 3rem 3.6rem;position:relative;background-color:#fff;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent calc(2.3rem - 1px),var(--linea) calc(2.3rem - 1px),var(--linea) 2.3rem);background-position:0 .9rem;box-shadow:0 0 18px rgba(0,0,0,.08)}
+.hoja::before{content:"";position:absolute;top:0;bottom:0;left:2.7rem;width:2px;background:var(--margen);opacity:.6}
+h1{font-size:2.6rem;line-height:2.3rem;margin:0 0 2.3rem;font-weight:700;text-decoration:underline wavy var(--margen);text-underline-offset:.35rem;text-decoration-thickness:1.5px}
+p{margin:0 0 2.3rem;font-size:1.65rem;line-height:2.3rem;font-weight:500}
+.firma{font-size:1.9rem;font-weight:700;margin-bottom:0}
+.pd{font-size:1.45rem}
+.est{letter-spacing:.35rem;color:var(--margen);font-size:1.3rem;margin-top:2.3rem}
+#intro{position:fixed;inset:0;z-index:10;overflow:hidden;background-color:#fff;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent calc(2.3rem - 1px),var(--linea) calc(2.3rem - 1px),var(--linea) 2.3rem);transition:opacity .9s,visibility .9s}
+#intro.fuera{opacity:0;visibility:hidden}
+.d{position:absolute;white-space:nowrap;opacity:0;transform:rotate(var(--r));animation:pop .8s ease forwards;animation-delay:var(--t)}
+.nom{font-size:2.4rem;font-weight:700}
+.tit{font-size:1.3rem;color:#7388b8}
+.ico{font-size:1.9rem;color:var(--margen)}
+@keyframes pop{from{opacity:0;transform:rotate(var(--r)) scale(.7)}to{opacity:1;transform:rotate(var(--r)) scale(1)}}
+.centro{position:absolute;left:0;right:0;top:42%;text-align:center}
+.centro .t{opacity:0;animation:ver .9s ease forwards;animation-delay:4.3s}
+.centro .t b{display:block;font-size:3.4rem;line-height:1.1;text-decoration:underline wavy var(--margen);text-underline-offset:.4rem;text-decoration-thickness:1.5px}
+.centro .t span{font-size:1.7rem}
+.abrir{opacity:0;margin-top:1.3rem;animation:ver .9s ease forwards;animation-delay:5.2s}
+.abrir button{font:500 1.7rem 'Caveat',cursive;color:var(--tinta);background:none;border:2px solid var(--tinta);border-radius:999px;padding:.2rem 1.6rem;cursor:pointer}
+.abrir button:focus-visible{outline:3px solid var(--margen);outline-offset:3px}
+@keyframes ver{to{opacity:1}}
+@keyframes ap{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.espera>*{opacity:0}
+.lista>*{opacity:0;animation:ap .9s ease forwards;animation-delay:calc(var(--i) * .55s + .5s)}
+@media (prefers-reduced-motion:reduce){.d,.centro .t,.abrir,.lista>*{animation:none;opacity:1}.lista>*{transform:none}}
+</style>
+</head>
+<body>
+<div id="intro">
+  <span class="d ico" style="left:9%;top:11%;--r:-8deg;--t:.3s">★</span>
+  <span class="d ico" style="right:12%;top:9%;--r:8deg;--t:.8s">♪</span>
+  <span class="d tit" style="left:6%;top:24%;--r:-3deg;--t:1.3s">Story of My Life</span>
+  <span class="d tit" style="right:6%;top:27%;--r:4deg;--t:1.7s">Night Changes</span>
+  <span class="d ico" style="left:46%;top:17%;--r:10deg;--t:2.1s">★</span>
+  <span class="d ico" style="left:78%;top:35%;--r:-8deg;--t:2.4s">♪</span>
+  <span class="d ico" style="left:10%;top:34%;--r:8deg;--t:2.6s">♫</span>
+  <span class="d ico" style="left:8%;top:76%;--r:6deg;--t:2.9s">★</span>
+  <span class="d ico" style="right:10%;top:78%;--r:-6deg;--t:3.3s">♫</span>
+  <span class="d ico" style="left:40%;top:88%;--r:-4deg;--t:3.6s">★</span>
+  <span class="d ico" style="right:9%;top:86%;--r:6deg;--t:3.9s">★</span>
+  <div class="centro">
+    <div class="t"><b>Annye</b><span>esto es para ti</span></div>
+    <div class="abrir"><button id="abrir">Abrir</button></div>
+  </div>
+</div>
+<div class="hoja">
+  <h1>Para Annye</h1>
+  <p>Quería hacerte un detalle, de esos que uno hace porque sí, porque se acordó de ti y quiso que lo supieras.</p>
+  <p>Gracias por aparecer en mi vida. Es raro cuando conoces a alguien y de a poco deja de sentirse como un extraño. Contigo me pasó eso, y me alegra mucho.</p>
+  <p>Gracias por compartir conmigo momentos bonitos, hasta los más simples. A veces son los que más se quedan.</p>
+  <p>Ojalá podamos seguir conociéndonos y que vengan muchos ratos así. Y me gusta cómo te emocionas con lo que quieres, se te nota un montón.</p>
+  <p>Gracias por ser como eres.</p>
+  <p class="firma">Piero</p>
+  
+  <div class="est" aria-hidden="true">★★★★★</div>
+</div>
+<script>
+(function(){
+  var h=document.querySelector('.hoja'),intro=document.getElementById('intro');
+  h.classList.add('espera');
+  document.body.style.overflow='hidden';
+  document.getElementById('abrir').onclick=function(){
+    var k=0;
+    Array.prototype.forEach.call(h.children,function(c){c.style.setProperty('--i',k++)});
+    h.classList.remove('espera');h.classList.add('lista');
+    document.body.style.overflow='';window.scrollTo(0,0);
+    intro.classList.add('fuera');
+    setTimeout(function(){intro.remove()},1000);
+  };
+})();
+</script>
+</body>
+</html>
